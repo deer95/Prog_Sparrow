@@ -10,10 +10,9 @@ text_array = set()
 for line in text:
     line = line.split()
     for word in line:
-        text_array.add(re.sub('[^\w-]', '', word))
+        text_array.add(re.sub('[^\w\-\']', '', word.lower()))
 
-text_array = list(text_array)
-text_array.sort(key=sorter)
+text_array = sorted(text_array, key=sorter)
 
 for elt in text_array:
     print(elt)

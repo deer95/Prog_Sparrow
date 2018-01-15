@@ -1,23 +1,21 @@
 import re
 
-def comparer(s, i):
-    is_palindrome = False
-    while i <= len_s // 2:
-        if s[i] == s[len_s - i - 1]:
-            i += 1
-            is_palindrome = True
-            comparer(s, i)
-        else:
-            break
-    return is_palindrome
+def comparer(s):
+    if len(s) <= 1:
+        return True
+
+    if s[0] != s[-1]:
+        return False
+
+    return comparer(s[1:-1])
 
 
 s = 'Я не стар, брат Сеня'.lower()
 s = re.sub('\W', '', s)
-i = 0
-len_s = len(s)
 
-if comparer(s, i) == True:
+is_palindrome = comparer(s)
+
+if is_palindrome:
     print('It\'s a palindrome')
 else:
     print('It\'s not a palindrome')
