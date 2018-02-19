@@ -1,8 +1,8 @@
 import os
 
-cipher = open('cipher.txt', 'w', encoding='utf-8')
-text = open('text_caesar.txt', 'r', encoding='utf-8')
-n = 3
+cipher = open('caesar_cipher.txt', 'w', encoding='utf-8')
+text = open('caesar_text.txt', 'r', encoding='utf-8')
+n = 5
 
 for line in text:
     for sym in line:
@@ -12,4 +12,4 @@ for line in text:
 text.close()
 cipher.close()
 
-os.startfile('D:\PyProjects_SD\Sparrow_2\cipher.txt')
+os.startfile('caesar_cipher.txt')
