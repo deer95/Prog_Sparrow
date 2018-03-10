@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf10068c-229d-4158-8385-0ef492c6806e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Palindrome_4.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Caesar cipher.py" afterPath="$PROJECT_DIR$/Syms Caesar_cipher.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Caesar coder.py" afterPath="$PROJECT_DIR$/Syms Caesar_coder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Palindrome_2.py" afterPath="$PROJECT_DIR$/Syms Palindrome_2.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Palindrome_3.py" afterPath="$PROJECT_DIR$/Syms Palindrome_3.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Palindrome_4.py" afterPath="$PROJECT_DIR$/Syms Palindrome_4.py" />
-    </list>
+    <list default="true" id="bf10068c-229d-4158-8385-0ef492c6806e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -466,7 +457,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="edited Caesar cipher.py&#10;changed Caesar coder.py a little&#10;consequently, there were edited .txt files&#10;added files Palindrome_2, 3, 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited Caesar cipher.py&#10;changed Caesar coder.py a little&#10;consequently, there were edited .txt files&#10;added files Palindrome_2, 3, 4" />
+    <MESSAGE value="created Syms-1, 2, 4&#10;renamed Syms Caesar_cipher.py, Syms Caesar_coder, Syms Palindrome_2, 3, 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="created Syms-1, 2, 4&#10;renamed Syms Caesar_cipher.py, Syms Caesar_coder, Syms Palindrome_2, 3, 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
