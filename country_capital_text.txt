@@ -198,7 +198,7 @@ Sudan:Khartoum
 Suriname:Paramaribo
 Swaziland:Mbabane
 Sweden:Stockholm
-Switzerland:de jure
+Switzerland:Bern
 Syria:Damascus
 Taiwan:Taipei
 Tajikistan:Dushanbe

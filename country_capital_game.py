@@ -1,14 +1,14 @@
 import random
 
-file = open('country_capital_text.txt', 'r', encoding = 'utf-8')
-coun_cap_dict = {}
-
-'''ЗАГРУЖЕЕМ ДАННЫЕ'''
+'''ЗАГРУЖАЕМ ДАННЫЕ'''
 def load_data():
+    file = open('country_capital_text.txt', 'r', encoding = 'utf-8')
+    coun_cap_dict = {}
     for line in file:
         country, capital = line.split(':')
         capital = capital.strip()
         coun_cap_dict[capital] = country
+    file.close()
     return(coun_cap_dict)
 
 
@@ -23,8 +23,8 @@ def play_game(coun_cap_dict):
     while True:
         if rounds.isdigit():
             rounds = int(rounds)
-            if rounds > 233:
-                print('Sorry, your number is too big. Type something less than 233.')
+            if rounds > 233 or rounds <= 0:
+                print('Sorry, your number is incorrect. Type something between 233 and 0.')
                 rounds = input('Enter number of rounds: ')
             else:
                 break
@@ -36,15 +36,15 @@ def play_game(coun_cap_dict):
     while True:
         if variants_int.isdigit():
             variants_int = int(variants_int)
-            if variants_int > 10:
-                print('Sorry, your number is too big. Type something less than 10.')
+            if variants_int > 10 or rounds <= 0:
+                print('Sorry, your number is too big. Type something between 10 and 0.')
                 variants_int = input('Enter number of rounds: ')
             else:
                 break
         else:
             print('Sorry, I accept only integers. Type once more.')
             variants_int = input('Enter number of rounds: ')
-        variants_int -= 1
+    variants_int -= 1
 
     '''ИГРА'''
     for i in range(rounds):
@@ -79,7 +79,39 @@ def play_game(coun_cap_dict):
         else:
             print("Sorry, you are wrong. The capital of {} is {}.".format(country, capital))
         print()
-    return score
+    print('The game is over.\nYou finished it with the score: {}.'.format(score))
 
-score = play_game(load_data())
-print('The game is over.\nYou finished it with the score: {}.'.format(score))
+
+def process():
+    go_on = True
+    coun_cap_dict = load_data()
+    print('For playing type "play".\nFor list of countries type "list".\nFor exit type "exit".')
+    reply = input('Type something: ').lower()
+    if reply == 'play':
+        play_game(coun_cap_dict)
+
+    elif reply == 'list':
+        for capital in coun_cap_dict:
+            print('The capital of {} is {}.'.format(coun_cap_dict[capital], capital))
+
+    elif reply == 'exit':
+        print('Thank you for working! Bye')
+        go_on = False
+
+    else:
+        item_list = coun_cap_dict.items()
+        coun_dict = {}
+        for pair in item_list:
+            coun_dict[pair[1].lower()] = pair[0].lower()
+        if reply in coun_dict.keys():
+            print('The capital of {} is {}.'.format(reply.capitalize(), coun_dict[reply].capitalize()))
+        else:
+            print('Sorry, there is no "{}" in my list.'.format(reply))
+    print()
+
+    return go_on
+
+go_on = True
+while go_on:
+    go_on = process()
+
