@@ -14,7 +14,6 @@ def load_data():
 
 '''ИГРАЕМ В ИГРУ'''
 def play_game(coun_cap_dict):
-
     score = 0
 
     '''ВВОД И ПРОВЕРКА ДАННЫХ'''
