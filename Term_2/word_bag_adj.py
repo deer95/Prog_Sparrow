@@ -11,18 +11,21 @@ file = open('word_bag_text.txt', 'r', encoding = 'utf-8')
 text = file.read()
 file.close()
 
-stemmer = pymystem3.Mystem(entire_input = False, disambiguation = True, speedup=True)
+stemmer = pymystem3.Mystem(entire_input = False, disambiguation = True)
 adj_set = set(['A', 'ANUM', 'APRO'])
 statistics_list = []
 
 if text == '\n':
     print('Your text is empty.')
 else:
-    stems_list = stemmer.analyze(str(text))
+    stems_list = stemmer.analyze(str(text), speedup=True)
     for token_dict in stems_list:
+        print(token_dict)
         lemma_list = token_dict['analysis']
+        print(lemma_list)
         if lemma_list != []:
             lexeme_dict = lemma_list[0]
+            print(lexeme_dict)
             gr_description = lexeme_dict['gr']
             pos = re.match('\A[\w]+(?==)', gr_description)
             if pos is not None:
