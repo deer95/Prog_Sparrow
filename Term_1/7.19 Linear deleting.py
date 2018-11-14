@@ -1,6 +1,6 @@
-import time
+import time_speaker
 
-t = time.time()
+t = time_speaker.time_speaker()
 
 n = 1000
 l = list(range(10)) * n
@@ -18,7 +18,7 @@ while i + num_x < len(l):
 
 l[-num_x:] = []
 
-t = time.time() - t
+t = time_speaker.time_speaker() - t
 
 print(l[:30])
 print(t)

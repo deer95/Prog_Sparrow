@@ -1,6 +1,6 @@
 import random
 import os
-import time
+import time_speaker
 
 
 def enter_data():
@@ -157,7 +157,7 @@ while cells_set:
         break
     else:
         cells_set = new_cells_set
-        time.sleep(0.5)
+        time_speaker.sleep(0.5)
         print("\n" * 5)
         #os.system('cls')
         print_field(cells_set)

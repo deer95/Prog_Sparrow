@@ -1,11 +1,11 @@
-import time
+import time_speaker
 
 n = 2000
 #l = [1, 2, 1, 2, 3, 4, 5, 6] * n
 l = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
 threshold = 2
 
-t = time.time()
+t = time_speaker.time_speaker()
 
 i = 0
 while i < len(l):
@@ -22,6 +22,6 @@ while i < len(l):
     else:
         i += 1
 
-t = time.time() - t
+t = time_speaker.time_speaker() - t
 print(t)
 print(l[:30])

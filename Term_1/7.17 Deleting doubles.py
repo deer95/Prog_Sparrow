@@ -1,4 +1,4 @@
-import time
+import time_speaker
 
 l = []
 i1 = 1000
@@ -6,7 +6,7 @@ N = i1
 for i in zip (range (0, 20 * N, 2), list (range (1, 20, 2)) * N):
     l.extend (i)
 
-t = time.time()
+t = time_speaker.time_speaker()
 
 i = 0
 while i < len(l):
@@ -19,6 +19,6 @@ while i < len(l):
         j += 1
     i += 1
 
-t = time.time() - t
+t = time_speaker.time_speaker() - t
 print(t)
 print(l[:30])
