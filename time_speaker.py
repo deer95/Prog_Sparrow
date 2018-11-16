@@ -23,6 +23,7 @@ def number2string(n, tens_ends, ones_ends, sg_root):
 
 
 def even_time(hour, minute):
+    # if minutes = 0 or 30
     if minute == 30:
         if hour == 12:
             hour = 0
@@ -45,6 +46,7 @@ def even_time(hour, minute):
 
 
 def left_time(hour, minute):
+    # if minutes in [40, 45, 50] or less than 50
     time_diff = 60 - minute
     if hour == 12:
             hour = 0
@@ -64,6 +66,7 @@ def left_time(hour, minute):
 
 
 def passed_time(hour, minute):
+    # if minutes < 30
     if hour == 12:
             hour = 0
     h_tens_ends = ['', 'ь', 'ь']
@@ -85,6 +88,7 @@ def passed_time(hour, minute):
 
 
 def concrete_time(hour, minute):
+    # if minutes > 30
     h_tens_ends = ['', 'ь', 'ь']
     h_ones_ends = ['ь', '', 'а', 'и', 'е', 'ь', 'ь', 'ь', 'емь', 'ь']
     h_str = number2string(hour, h_tens_ends, h_ones_ends, ones_hour)
